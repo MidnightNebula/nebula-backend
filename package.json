@@ -2,7 +2,7 @@
   "name": "nebula-backend",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/app.ts",
+    "dev": "tsx src/app.ts",
     "db:up": "docker compose up -d",
     "build": "tsc",
     "start": "node dist/index.js",
