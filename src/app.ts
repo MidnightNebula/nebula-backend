@@ -13,10 +13,6 @@ app.use("/api/auth/*", authCors);
 
 const routes = [authRouter] as const;
 
-app.get("/", (c) => {
-  return c.text("Hello world");
-});
-
 routes.forEach((route) => {
   app.basePath("/api").route("/", route);
 });

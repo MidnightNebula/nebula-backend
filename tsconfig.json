@@ -5,7 +5,6 @@
         "moduleResolution": "bundler",
         "allowJs": true,
         "allowImportingTsExtensions": true,
-
         "noEmit": true,
         "strict": true,
         "skipLibCheck": true,
@@ -17,9 +16,9 @@
         "typeRoots": ["./node_modules/@types", "src/shared/types"],
         "outDir": "dist",
         "rootDir": "src",
-        "baseUrl": "./src", // Enables absolute imports from "src"
+        "baseUrl": "./src",
         "paths": {
-            "@/*": ["./*"] // Optional: Map "@/" to "./src/"
+            "@/*": ["./*"]
         }
     },
     "include": ["src/**/*", "assets"],

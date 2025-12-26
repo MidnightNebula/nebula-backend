@@ -27,7 +27,6 @@ export const betterAuthClient = betterAuth({
   },
 
   onAPIError: {
-    throw: true,
     onError: () => {
       logger.error("Unknown API error");
     },

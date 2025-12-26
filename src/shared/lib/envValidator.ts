@@ -9,12 +9,8 @@ z.config({
       logger.error(`Env ${iss.path} variable is not found. Close the server`);
       process.exit(1);
     }
-    if (iss.code === "too_small") {
-      logger.debug(
-        `Env variables ${iss.path} is empty. Minimum is ${iss.minimum}`
-      );
-      return "";
-    }
+
+    return "";
   },
 });
 
@@ -23,6 +19,7 @@ const envSchema = z.object({
   DISCORD_CLIENT_SECRET: z.string().nonempty(),
   DISCORD_CLIENT_ID: z.string().nonempty(),
   BETTER_AUTH_SECRET: z.string().nonempty(),
+  BETTER_AUTH_URL: z.string().nonempty(),
   ENV: z
     .union([z.literal("development"), z.literal("production")])
     .default("development"),

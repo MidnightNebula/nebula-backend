@@ -1,4 +1,3 @@
-// @ts-check
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
