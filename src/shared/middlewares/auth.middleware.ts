@@ -4,7 +4,7 @@ import { betterAuthClient, type AuthType } from "@/api/auth/config";
 
 export const authMiddleware = createMiddleware<AuthType>(async (c, next) => {
   logger.info(
-    `Start app. Req: Method: ${c.req.method}, url: ${c.req.url}, status: ${c.res.status}}`
+    `Start app. Req: Method: ${c.req.method}, url: ${c.req.url}, status: ${c.res.status}}`,
   );
   const session = await betterAuthClient.api.getSession({
     headers: c.req.raw.headers,

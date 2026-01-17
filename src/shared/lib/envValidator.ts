@@ -18,8 +18,6 @@ const envSchema = z.object({
   CLIENT_ORIGIN: z.string().nonempty(),
   DISCORD_CLIENT_SECRET: z.string().nonempty(),
   DISCORD_CLIENT_ID: z.string().nonempty(),
-  BETTER_AUTH_SECRET: z.string().nonempty(),
-  BETTER_AUTH_URL: z.string().nonempty(),
   ENV: z
     .union([z.literal("development"), z.literal("production")])
     .default("development"),

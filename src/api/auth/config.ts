@@ -5,6 +5,16 @@ import { betterAuth } from "better-auth";
 import { openAPI } from "better-auth/plugins";
 
 export const betterAuthClient = betterAuth({
+  account: {
+    encryptOAuthTokens: true,
+    storeAccountCookie: true,
+    updateAccountOnSignIn: true,
+    accountLinking: {
+      enabled: true,
+      trustedProviders: ["discord"],
+      allowDifferentEmails: false,
+    },
+  },
   socialProviders: {
     discord: {
       clientId: env.DISCORD_CLIENT_ID,
@@ -19,11 +29,6 @@ export const betterAuthClient = betterAuth({
       strategy: "compact",
       refreshCache: true,
     },
-  },
-
-  account: {
-    updateAccountOnSignIn: true,
-    storeAccountCookie: true,
   },
 
   onAPIError: {
