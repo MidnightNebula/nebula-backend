@@ -1,11 +1,16 @@
+// @ts-check
+
+import eslint from '@eslint/js';
 import noRelativeImportPaths from "eslint-plugin-no-relative-import-paths";
 import { defineConfig } from "eslint/config";
-import tseslint from "typescript-eslint";
+import tseslint from 'typescript-eslint';
 
 export default defineConfig([
-  tseslint.configs.strict,
-  tseslint.configs.stylistic,
-  tseslint.configs.stylisticTypeChecked,
+  {
+    ignores: ["eslint.config.*", "dist/**", "node_modules/**"]
+  },
+  eslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
   {
     languageOptions: {
       parserOptions: {

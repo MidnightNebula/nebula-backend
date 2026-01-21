@@ -6,7 +6,7 @@ import { logger } from "@/shared/lib/logger";
 z.config({
   customError: (iss) => {
     if (iss.code === "invalid_type") {
-      logger.error(`Env ${iss.path} variable is not found. Close the server`);
+      logger.error(`Env ${Array.isArray(iss.path) ? iss.path.join('.') : 'UNKNOWN_ENV_MISSING'} variable is not found. Close the server`);
       process.exit(1);
     }
 

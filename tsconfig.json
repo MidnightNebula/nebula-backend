@@ -13,14 +13,25 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "verbatimModuleSyntax": true,
-        "typeRoots": ["./node_modules/@types", "src/shared/types"],
+        "typeRoots": [
+            "./node_modules/@types",
+            "src/shared/types"
+        ],
         "outDir": "dist",
         "rootDir": "src",
         "baseUrl": "./src",
         "paths": {
-            "@/*": ["./*"]
+            "@/*": [
+                "./*"
+            ]
         }
     },
-    "include": ["src/**/*", "assets"],
-    "exclude": ["node_modules", "dist"]
+    "include": [
+        "src/**/*",
+        "assets",
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
 }
